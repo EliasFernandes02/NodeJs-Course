@@ -1,14 +1,9 @@
-const http = require('http');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+var http = require("http");
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+http.createServer(function(req,res) {
+console.log("meu servidor esta rodando")
+res.end('<h1>Sai daqui cara<h1> <h4>Servidor e meu<h4>');
+}).listen(8181);
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+console.log("meu servidor esta rodando")
