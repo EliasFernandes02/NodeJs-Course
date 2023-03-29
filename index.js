@@ -5,6 +5,18 @@ app.get("/",function(req,res) {
     res.send("<h1>Olar mundo</h1>")
 })
 
+
+//query param
+app.get("/canal/youtube",function(req,res) {
+    var canal = req.query["canal"];
+    if(canal) {
+        res.send(canal)
+    } else {
+        res.send("Nenhum canal fornecido")
+    }
+  
+})
+
 //parametro nao obrigatorio
 app.get("/blog/:artigo?",function(req,res) {
     var artigo = req.params.artigo
